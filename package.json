@@ -12,8 +12,6 @@
   "author": "",
   "license": "ISC",
   "devDependencies": {
-    "@aws-amplify/cli": "^7.4.2",
-    "lerna": "^4.0.0",
     "verdaccio": "^5.2.2"
   }
 }
