@@ -4,6 +4,12 @@ function publish () {
   yarn publish --cwd $1 --registry http://localhost:4000 --non-interactive
 }
 
+# if jq does not exist, attempt install
+if ! [ -x "$(command -v jq)" ]
+then
+  yum install jq -y
+fi
+
 # start_verdaccio
 yarn verdaccio --listen 4000 --config ./verdaccio.yaml &
 VERDACCIO_PID=$!
@@ -26,10 +32,12 @@ done
 
 # push resources (should install lambda deps from verdaccio)
 echo "Running amplify push..."
-if [[ command -v amplifyPush ]]
+# check if we're running in Amplify Console, where helper scripts should be available
+if [ -x "$(command -v amplifyPush)" ]
 then
   amplifyPush --simple
 else
+  # if not in Amplify Console (local) run from Amplify CLI directly
   amplify push -y
 fi
 
