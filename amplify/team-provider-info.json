@@ -1,29 +1,29 @@
 {
-    "dev": {
-        "awscloudformation": {
-            "AuthRoleName": "amplify-workspaces-dev-105334-authRole",
-            "UnauthRoleArn": "arn:aws:iam::814763596509:role/amplify-workspaces-dev-105334-unauthRole",
-            "AuthRoleArn": "arn:aws:iam::814763596509:role/amplify-workspaces-dev-105334-authRole",
-            "Region": "us-east-1",
-            "DeploymentBucketName": "amplify-workspaces-dev-105334-deployment",
-            "UnauthRoleName": "amplify-workspaces-dev-105334-unauthRole",
-            "StackName": "amplify-workspaces-dev-105334",
-            "StackId": "arn:aws:cloudformation:us-east-1:814763596509:stack/amplify-workspaces-dev-105334/13175730-4890-11ec-af72-0e1d88544c6b",
-            "AmplifyAppId": "d3fczwokueha2n"
-        },
-        "categories": {
-            "function": {
-                "workspaces4ccdadd7": {
-                    "deploymentBucketName": "amplify-workspaces-dev-105334-deployment",
-                    "s3Key": "amplify-builds/workspaces4ccdadd7-3662314d447974797141-build.zip"
-                }
-            },
-            "hosting": {
-                "amplifyhosting": {
-                    "appId": "d3fczwokueha2n",
-                    "type": "cicd"
-                }
-            }
+  "dev": {
+    "awscloudformation": {
+      "AuthRoleName": "amplify-workspaces-dev-105334-authRole",
+      "UnauthRoleArn": "arn:aws:iam::814763596509:role/amplify-workspaces-dev-105334-unauthRole",
+      "AuthRoleArn": "arn:aws:iam::814763596509:role/amplify-workspaces-dev-105334-authRole",
+      "Region": "us-east-1",
+      "DeploymentBucketName": "amplify-workspaces-dev-105334-deployment",
+      "UnauthRoleName": "amplify-workspaces-dev-105334-unauthRole",
+      "StackName": "amplify-workspaces-dev-105334",
+      "StackId": "arn:aws:cloudformation:us-east-1:814763596509:stack/amplify-workspaces-dev-105334/13175730-4890-11ec-af72-0e1d88544c6b",
+      "AmplifyAppId": "d3fczwokueha2n"
+    },
+    "categories": {
+      "function": {
+        "workspaces4ccdadd7": {
+          "deploymentBucketName": "amplify-workspaces-dev-105334-deployment",
+          "s3Key": "amplify-builds/workspaces4ccdadd7-4d3676384c6f62726868-build.zip"
         }
+      },
+      "hosting": {
+        "amplifyhosting": {
+          "appId": "d3fczwokueha2n",
+          "type": "cicd"
+        }
+      }
     }
+  }
 }
