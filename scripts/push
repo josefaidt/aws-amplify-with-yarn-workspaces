@@ -26,7 +26,12 @@ done
 
 # push resources (should install lambda deps from verdaccio)
 echo "Running amplify push..."
-amplify push -y
+if [[ command -v amplifyPush ]]
+then
+  amplifyPush --simple
+else
+  amplify push -y
+fi
 
 # kill verdaccio, remove storage
 echo "Killing Verdaccio and removing storage..."
