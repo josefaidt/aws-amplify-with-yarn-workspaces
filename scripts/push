@@ -35,8 +35,10 @@ echo "Running amplify push..."
 # check if we're running in Amplify Console, where helper scripts should be available
 if [ -x "$(command -v amplifyPush)" ]
 then
+  echo 'amplifypush helper script detected!'
   amplifyPush --simple
 else
+  echo 'no amplifypush script found'
   # if not in Amplify Console (local) run from Amplify CLI directly
   amplify push -y
 fi
