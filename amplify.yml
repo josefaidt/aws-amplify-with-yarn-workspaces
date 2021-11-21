@@ -1,0 +1,30 @@
+version: 1
+env:
+  variables:
+    AMPLIFY_DIFF_BACKEND: false # important to deploy backend
+backend:
+  phases:
+    preBuild:
+      commands:
+        - nvm install
+        - yarn install --frozen-lockfile
+    build:
+      commands:
+        - yarn push
+frontend:
+  phases:
+    preBuild:
+      commands:
+        - nvm install
+        - yarn install --frozen-lockfile
+    build:
+      commands:
+        - yarn workspace @my/app run build
+  artifacts:
+    baseDirectory: packages/app/build
+    files:
+      - '**/*'
+  cache:
+    paths:
+      - node_modules/**/*
+      - packages/app/node_modules/**/*
