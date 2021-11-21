@@ -6,12 +6,13 @@ backend:
   phases:
     preBuild:
       commands:
+        - echo 'this is an empty prebuild'
+    build:
+      commands:
         - npm config ls
         - nvm install
         - npm i -g @aws-amplify/cli
         - yarn install --frozen-lockfile --silent
-    build:
-      commands:
         - yarn push
 frontend:
   phases:
