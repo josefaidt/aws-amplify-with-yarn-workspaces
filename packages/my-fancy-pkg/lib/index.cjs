@@ -1,0 +1,1 @@
+var n=Object.defineProperty;var a=o=>n(o,"__esModule",{value:!0});var d=(o,r)=>{a(o);for(var t in r)n(o,t,{get:r[t],enumerable:!0})};d(exports,{add:()=>e});function e(o,r){return Math.floor(o+r)}0&&(module.exports={add});

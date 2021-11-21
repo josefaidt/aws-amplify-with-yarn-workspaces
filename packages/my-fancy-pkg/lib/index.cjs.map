@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": ["../index.js"],
+  "sourcesContent": ["/**\n * Add two numbers\n * @param {number} a\n * @param {number} b\n * @returns {number}\n */\nexport function add(a, b) {\n  return Math.floor(a + b)\n}\n"],
+  "mappings": "qIAAA,uBAMO,WAAa,EAAG,EAAG,CACxB,MAAO,MAAK,MAAM,EAAI",
+  "names": []
+}

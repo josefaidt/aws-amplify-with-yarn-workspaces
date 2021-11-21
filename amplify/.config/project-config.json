@@ -1,0 +1,17 @@
+{
+  "projectName": "workspaces",
+  "version": "3.1",
+  "frontend": "javascript",
+  "javascript": {
+    "framework": "none",
+    "config": {
+      "SourceDir": "packages/app",
+      "DistributionDir": "packages/app/build",
+      "BuildCommand": "yarn workspace @my/app run build",
+      "StartCommand": "yarn workspace @my/app run start"
+    }
+  },
+  "providers": [
+    "awscloudformation"
+  ]
+}

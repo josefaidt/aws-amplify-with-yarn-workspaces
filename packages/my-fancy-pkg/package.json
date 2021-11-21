@@ -1,0 +1,23 @@
+{
+  "name": "@my/fancy-pkg",
+  "type": "module",
+  "version": "1.0.1",
+  "description": "",
+  "exports": {
+    ".": {
+      "import": "./index.js",
+      "require": "./lib/index.cjs"
+    }
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\"",
+    "build": "esbuild index.js --outdir=lib --format=cjs --platform=node --target=node14 --sourcemap=external --minify --out-extension:.js=.cjs",
+    "prepublish": "yarn build"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "esbuild": "^0.13.15"
+  }
+}

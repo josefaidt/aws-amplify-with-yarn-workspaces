@@ -1,0 +1,35 @@
+{
+  "paths": [
+    {
+      "name": "/add",
+      "lambdaFunction": "workspaces4ccdadd7",
+      "privacy": {
+        "open": true
+      },
+      "policyResourceName": "/add"
+    }
+  ],
+  "resourceName": "api71abd604",
+  "apiName": "api71abd604",
+  "functionArns": [
+    {
+      "lambdaFunction": "workspaces4ccdadd7"
+    }
+  ],
+  "privacy": {
+    "auth": 0,
+    "unauth": 0,
+    "authRoleName": "amplify-workspaces-dev-105334-authRole",
+    "unAuthRoleName": "amplify-workspaces-dev-105334-unauthRole"
+  },
+  "dependsOn": [
+    {
+      "category": "function",
+      "resourceName": "workspaces4ccdadd7",
+      "attributes": [
+        "Name",
+        "Arn"
+      ]
+    }
+  ]
+}
