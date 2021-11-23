@@ -10,6 +10,15 @@ then
   yum install jq -y
 fi
 
+function write_to_plugins () {
+  AMPLIFY_PLUGINS_FILE=~/.amplify/plugins.json
+  [[ -e $AMPLIFY_PLUGINS_FILE ]] && \
+    content="$(jq '.pluginDirectories += "packaged-node-modules"' $AMPLIFY_PLUGINS_FILE)" && \
+    echo "${content}" > $AMPLIFY_PLUGINS_FILE
+}
+
+write_to_plugins
+
 # start_verdaccio
 yarn verdaccio --listen 4000 --config ./verdaccio.yaml &
 VERDACCIO_PID=$!
@@ -32,11 +41,13 @@ done
 
 # push resources (should install lambda deps from verdaccio)
 echo "Running amplify push..."
+IS_BAD_BACKEND_BUILD=0
 # check if we're running in Amplify Console, where helper scripts should be available
 if [ -x "$(command -v amplifyPush)" ]
 then
   echo 'amplifyPush helper script detected!'
   amplifyPush --simple
+  IS_BAD_BACKEND_BUILD=$?
 else
   echo 'no amplifyPush script found'
   # if not in Amplify Console (local) run from Amplify CLI directly
@@ -47,3 +58,8 @@ fi
 echo "Killing Verdaccio and removing storage..."
 kill $VERDACCIO_PID && rm -rf .verdaccio;
 echo "Success! 🙌"
+
+if [ $IS_BAD_BACKEND_BUILD -ne 0 ]; then
+  echo "Oh no 🤕"
+fi
+exit $IS_BAD_BACKEND_BUILD

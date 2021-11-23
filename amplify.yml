@@ -12,7 +12,7 @@ backend:
         - nvm install
         - which amplifyPush
         - yarn global add @aws-amplify/cli
-        - yarn install --frozen-lockfile --no-progress
+        - yarn install --frozen-lockfile
     build:
       commands:
         - yarn push
@@ -20,7 +20,7 @@ frontend:
   phases:
     preBuild:
       commands:
-        - yarn install --frozen-lockfile --silent
+        - yarn install --frozen-lockfile
     build:
       commands:
         - yarn workspace @my/app run build
