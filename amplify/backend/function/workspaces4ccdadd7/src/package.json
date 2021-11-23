@@ -8,6 +8,6 @@
   "main": "index.js",
   "license": "Apache-2.0",
   "dependencies": {
-    "@my/fancy-pkg": "1.0.1"
+    "@my/fancy-pkg": "1.0.2"
   }
 }

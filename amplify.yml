@@ -8,7 +8,7 @@ backend:
       commands:
         - nvm install
         - yarn global add @aws-amplify/cli
-        - yarn install --frozen-lockfile
+        - yarn install
     build:
       commands:
         - yarn push
