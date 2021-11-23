@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/bin/sh
 
 function publish () {
   yarn publish --cwd $1 --registry http://localhost:4000 --non-interactive
