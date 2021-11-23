@@ -17,8 +17,6 @@ function write_to_plugins () {
     echo "${content}" > $AMPLIFY_PLUGINS_FILE
 }
 
-write_to_plugins
-
 # start_verdaccio
 yarn verdaccio --listen 4000 --config ./verdaccio.yaml &
 VERDACCIO_PID=$!
@@ -46,6 +44,7 @@ IS_BAD_BACKEND_BUILD=0
 if [ -x "$(command -v amplifyPush)" ]
 then
   echo 'amplifyPush helper script detected!'
+  write_to_plugins
   amplifyPush --simple
   IS_BAD_BACKEND_BUILD=$?
 else
