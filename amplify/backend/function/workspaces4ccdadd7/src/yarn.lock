@@ -2,7 +2,7 @@
 # yarn lockfile v1
 
 
-"@my/fancy-pkg@1.0.1":
-  version "1.0.1"
-  resolved "http://localhost:4000/@my%2ffancy-pkg/-/fancy-pkg-1.0.1.tgz#72f6065d3529e691674856017c633ad600dda556"
-  integrity sha512-DkSDhuJzxrzfgBOvlgxn3LjI70P1n+SUgeddjnJLk7wkoOvfYxAB3ioh/cadmW03MTlvGo9My2Q6kAqUA9qRKA==
+"@my/fancy-pkg@1.0.2":
+  version "1.0.2"
+  resolved "http://localhost:4000/@my%2ffancy-pkg/-/fancy-pkg-1.0.2.tgz#4c40cb0b8262487f493cfdb4501e230953ba7aaa"
+  integrity sha512-IH6Zg6Cp3HGZoOdwBL0OO155W3W0QoZK2wPaudcVTSOtmEaEayXjom5B6XmnDbIKMPJY3I4jftyQI0OpcI0h/w==

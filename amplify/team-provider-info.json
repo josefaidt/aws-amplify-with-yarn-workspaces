@@ -15,7 +15,7 @@
       "function": {
         "workspaces4ccdadd7": {
           "deploymentBucketName": "amplify-workspaces-dev-105334-deployment",
-          "s3Key": "amplify-builds/workspaces4ccdadd7-4d3676384c6f62726868-build.zip"
+          "s3Key": "amplify-builds/workspaces4ccdadd7-46622b4779666333765a-build.zip"
         }
       },
       "hosting": {

@@ -39,14 +39,14 @@ done
 
 # push resources (should install lambda deps from verdaccio)
 echo "Running amplify push..."
-IS_BAD_BACKEND_BUILD=0
+HELPER_BACKEND_BUILD_EXIT_CODE=0
 # check if we're running in Amplify Console, where helper scripts should be available
 if [ -x "$(command -v amplifyPush)" ]
 then
   echo 'amplifyPush helper script detected!'
   write_to_plugins
   amplifyPush --simple
-  IS_BAD_BACKEND_BUILD=$?
+  HELPER_BACKEND_BUILD_EXIT_CODE=$?
 else
   echo 'no amplifyPush script found'
   # if not in Amplify Console (local) run from Amplify CLI directly
@@ -56,9 +56,9 @@ fi
 # kill verdaccio, remove storage
 echo "Killing Verdaccio and removing storage..."
 kill $VERDACCIO_PID && rm -rf .verdaccio;
-echo "Success! 🙌"
+echo "Done! 🙌"
 
-if [ $IS_BAD_BACKEND_BUILD -ne 0 ]; then
+if [ $HELPER_BACKEND_BUILD_EXIT_CODE -ne 0 ]; then
   echo "Oh no 🤕"
 fi
 exit $IS_BAD_BACKEND_BUILD
