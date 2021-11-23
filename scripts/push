@@ -17,7 +17,7 @@ function write_to_plugins () {
     echo "${content}" > $AMPLIFY_PLUGINS_FILE
 }
 
-# write_to_plugins
+write_to_plugins
 
 # start_verdaccio
 yarn verdaccio --listen 4000 --config ./verdaccio.yaml &
