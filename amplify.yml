@@ -6,11 +6,7 @@ backend:
   phases:
     preBuild:
       commands:
-        - npm config ls
-        - cat ~/.amplify/plugins.json
-        - which amplifyPush
         - nvm install
-        - which amplifyPush
         - yarn global add @aws-amplify/cli
         - yarn install --frozen-lockfile
     build:
