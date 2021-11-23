@@ -8,8 +8,8 @@ backend:
       commands:
         - npm config ls
         - nvm install
-        - npm i -g @aws-amplify/cli
-        - yarn install --frozen-lockfile --silent
+        - yarn global add @aws-amplify/cli
+        - yarn install --frozen-lockfile --no-progress
     build:
       commands:
         - yarn push
